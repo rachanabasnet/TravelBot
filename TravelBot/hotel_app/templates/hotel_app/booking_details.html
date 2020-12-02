@@ -1,0 +1,32 @@
+{% extends "travel_app/base.html" %} 
+{% block content %}
+	<div class="container">
+		<div class="destination">
+			<h1>Booking Summary</h1>
+        </div>
+        {% for item in items %}
+		<div class="row border mt-5">
+			<div class="col-lg">
+				<br>
+				<img src="{{ item.hotel.image.url }}" height="70%" width="70%">
+				<h3 style="margin-top: 20px;">{{item.hotel.name}}</h3>
+			</div>
+
+			<div class="col-sm">
+				<br>
+				<div class="card card-body mb-3">
+					<h3>Booked by: {{item.customer.username}}</h3>
+					<hr>
+					<h4>Price: Rs {{item.hotel.price}} per room</h4>
+					<hr>
+					<p>Number of rooms: {{item.no_of_rooms}}</p>
+					<p>Number of days: {{item.no_of_days}}</p><hr>
+					<h4>Total Price: Rs {{item.get_total|floatformat:2}}</h4>
+					<hr><br>
+					<button class="btn btn-outline-info">Proceed To Payment</button>
+				</div>
+			</div>
+        </div>
+        {% endfor %}
+	</div>
+{% endblock content%}
