@@ -9,6 +9,11 @@
                 <h3 class="account-name">Name: {{ user.profile.name }}</h3><hr>
                 <h5 class="account-heading">Username: {{ user.username }}</h5><br> 
                 <p class="text-secondary">Email: {{ user.email }}</p>
+                <br><hr><br>
+                <a href="{% url 'update_profile' %}">
+                    <button class="btn btn-outline-info">Update Profile</button>    
+                </a>
+                
             </div>
         </div>
     </div>

@@ -19,14 +19,21 @@ def booking(request, id):
         customer = request.user
         hotel = Hotel.objects.get(id=id)
         no_of_rooms = request.POST.get('no_of_rooms')
-        no_of_days = request.POST.get('no_of_days')  
-        Booking = BookHotel(customer=customer, hotel= hotel, no_of_rooms= no_of_rooms, no_of_days=no_of_days)
+        checkin_date = request.POST.get('checkin_date')
+        checkout_date = request.POST.get('checkout_date')
+        no_of_days = request.POST.get('no_of_days')
+        Booking = BookHotel(customer=customer, 
+                            hotel= hotel, 
+                            no_of_rooms= no_of_rooms, 
+                            checkin_date=checkin_date, 
+                            checkout_date=checkout_date, 
+                            no_of_days=no_of_days)
         Booking.save()
         messages.success(request, f'Booking Complete!!! Now Checkout for Payment!!!')
 
         return redirect('checkout')
     else:
-        form = BookingForm 
+        form = BookingForm() 
         a = {'form':form} 
         return render(request, 'hotel_app/bookhotel_form.html', a)
 

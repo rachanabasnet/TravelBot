@@ -30,19 +30,19 @@ ALLOWED_HOSTS = []
 # add model path
 MODELS=os.path.join(BASE_DIR,'travel_app/models')
 
-redis_host = os.environ.get('REDIS_HOST', 'localhost')
-# Channel layer definitions
-# http://channels.readthedocs.org/en/latest/deploying.html#setting-up-a-channel-backend
-CHANNEL_LAYERS = {
-    "default": {
-        # This example app uses the Redis channel layer implementation asgi_redis
-        "BACKEND": "asgi_redis.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [(redis_host, 6379)],
-        },
-       "ROUTING": "unravel_project.routing.channel_routing",
-    },
-}
+# redis_host = os.environ.get('REDIS_HOST', 'localhost')
+# # Channel layer definitions
+# # http://channels.readthedocs.org/en/latest/deploying.html#setting-up-a-channel-backend
+# CHANNEL_LAYERS = {
+#     "default": {
+#         # This example app uses the Redis channel layer implementation asgi_redis
+#         "BACKEND": "asgi_redis.RedisChannelLayer",
+#         "CONFIG": {
+#             "hosts": [(redis_host, 6379)],
+#         },
+#        "ROUTING": "unravel_project.routing.channel_routing",
+#     },
+# }
 
 
 # Application definition
@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hotel_app.apps.HotelAppConfig',
     # 'paypal.standard.ipn',
-    'channels'
+    # 'channels'
 ]
 
 MIDDLEWARE = [

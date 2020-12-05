@@ -16,7 +16,7 @@
     </div>
     <div class="desc">
       <p>{{ hotel.desc|truncatewords:20 }}</p>
-      <h4>Price per room: Rs {{ hotel.price|floatformat:2 }}</h4>
+      <h4>Price per room: ${{ hotel.price|floatformat:2 }}</h4>
       <a href="{% url 'booking' hotel.id %}">
         <button class="btn btn-outline-info">Book now</button>
       </a> 
