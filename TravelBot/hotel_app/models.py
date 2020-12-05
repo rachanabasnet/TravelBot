@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 
 class Hotel(models.Model):
     name = models.CharField(max_length=100)
-    desc = models.TextField(max_length=100)
+    desc = models.TextField(max_length=1000)
     image = models.ImageField(upload_to='img')
     price = models.FloatField(null=True, blank=True)
 
@@ -32,7 +32,7 @@ class Hotel(models.Model):
 
 class BookHotel(models.Model):
     customer = models.ForeignKey(User, max_length=200,null=True, blank=True, on_delete=models.CASCADE)
-    hotel = models.ForeignKey(Hotel, max_length=200,null=True, blank=True, on_delete=models.SET_NULL)
+    hotel = models.ForeignKey(Hotel, max_length=10000,null=True, blank=True, on_delete=models.SET_NULL)
     no_of_rooms = models.IntegerField(default=0, null=True, blank=True)
     checkin_date = models.DateTimeField(blank=True, null=True)
     checkout_date = models.DateTimeField(blank=True, null=True)
