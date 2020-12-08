@@ -141,22 +141,22 @@
               {% if user.is_authenticated %}
                 <script>
                   setTimeout(function(){ 
-                  jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Hi!I am travelbot. &#128075;' +'\n'+ '</div></div>'); }, 2000);
+                  jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Hi! {{user.username}}!!! I am travelbot. &#128075;' +'\n'+ '</div></div>'); }, 2000);
                   setTimeout(function(){ 
-                  jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Where do you plan to go?' +'\n'+ '</div></div>'); }, 3000);
-                  setTimeout(function(){ 
-                  jQuery('.chat__wrapper').append('<button class="destbuttons" onclick="available()">'+'Kathmandu'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Pokhara'+'</button>'+
-                  '<button class="destbuttons" onclick="na()">'+'Palpa'+'</button>'+'<button class="destbuttons" onclick="na()">'+'Mustang'+'</button>');}, 4000);
+                  jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'What do you want to know about &nbsp; Kathmandu?' +'\n'+ '</div></div>'); }, 3000);
+                  // setTimeout(function(){ 
+                  // jQuery('.chat__wrapper').append('<button class="destbuttons" onclick="available()">'+'Kathmandu'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Pokhara'+'</button>'+
+                  // '<button class="destbuttons" onclick="na()">'+'Palpa'+'</button>'+'<button class="destbuttons" onclick="na()">'+'Mustang'+'</button>');}, 4000);
                 </script>
               {% else %}
               <script>
                   setTimeout(function(){ 
-                  jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Hi!I am travelbot. &#128075;' +'\n'+ '</div></div>'); }, 2000);
+                  jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Hi! I am travelbot. &#128075;' +'\n'+ '</div></div>'); }, 2000);
                   setTimeout(function(){ 
-                  jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Where do you plan to go?' +'\n'+ '</div></div>'); }, 3000);
-                  setTimeout(function(){ 
-                  jQuery('.chat__wrapper').append('<button class="destbuttons" onclick="available()">'+'Kathmandu'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Pokhara'+'</button>'+
-                  '<button class="destbuttons" onclick="navailable()">'+'Palpa'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Mustang'+'</button>');}, 4000);
+                  jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'What do you want to know about &nbsp; Kathmandu?' +'\n'+ '</div></div>'); }, 3000);
+                  // setTimeout(function(){ 
+                  // jQuery('.chat__wrapper').append('<button class="destbuttons" onclick="available()">'+'Kathmandu'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Pokhara'+'</button>'+
+                  // '<button class="destbuttons" onclick="navailable()">'+'Palpa'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Mustang'+'</button>');}, 4000);
               </script>
               {% endif %} 
             </div>
@@ -177,21 +177,21 @@
     function closeDiv() {
       document.getElementById("myDiv").style.display = "none";
     }
-    function available(){
-      jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Great!What do you want to know?' +'\n'+ '</div></div>');
-      document.getElementById("chatfrom").style.display = "block";
-    }
-    function navailable(){
-      setTimeout(function(){ 
-      jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Sorry this is available yet.Please choose again.' +'\n'+ '</div></div>');}, 1000);
-      setTimeout(function(){ 
-      jQuery('.chat__wrapper').append('<button class="destbuttons" onclick="available()">'+'Kathmandu'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Pokhara'+'</button>'+
-        '<button class="destbuttons" onclick="navailable()">'+'Palpa'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Mustang'+'</button>');}, 2000);
+    // function available(){
+    //   jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Great!What do you want to know?' +'\n'+ '</div></div>');
+    //   document.getElementById("chatfrom").style.display = "block";
+    // }
+    // function navailable(){
+    //   setTimeout(function(){ 
+    //   jQuery('.chat__wrapper').append('<div class="chat__message"><div>' + 'Sorry this is available yet.Please choose again.' +'\n'+ '</div></div>');}, 1000);
+    //   setTimeout(function(){ 
+    //   jQuery('.chat__wrapper').append('<button class="destbuttons" onclick="available()">'+'Kathmandu'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Pokhara'+'</button>'+
+    //     '<button class="destbuttons" onclick="navailable()">'+'Palpa'+'</button>'+'<button class="destbuttons" onclick="navailable()">'+'Mustang'+'</button>');}, 2000);
 
-    }
-    function na(){
+    // }
+    // function na(){
       
-    }
+    // }
 
     //for pop up end
     //for websocket and input start

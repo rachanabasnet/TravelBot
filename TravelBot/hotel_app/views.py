@@ -33,9 +33,10 @@ def booking(request, id):
 
         return redirect('checkout')
     else:
+        hotel = Hotel.objects.get(id=id)
         form = BookingForm() 
-        a = {'form':form} 
-        return render(request, 'hotel_app/bookhotel_form.html', a)
+        booking_data = {'form':form, 'hotel':hotel} 
+        return render(request, 'hotel_app/bookhotel_form.html', booking_data)
 
 
 def checkout(request):

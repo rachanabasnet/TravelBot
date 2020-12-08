@@ -65,7 +65,8 @@ def chatbot_response(text):
         res = getResponse(ints, intents)
         return res
     else:
-        return "Sorry I don't understand you. Can you repeat the question?"
+        res = "Sorry I don't understand you. Can you repeat the question?"
+        return res
 
 def chat():
     print("Hey lets chat:")

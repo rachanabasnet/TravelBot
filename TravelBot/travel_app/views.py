@@ -4,17 +4,9 @@ from .models import Place
 
 # Create your views here.
 
-
-def index(request):
-    if request.user.is_authenticated:
-        print("Logged in")
-    else:
-        print("Not logged in")
-
-
 def home(request):
     context = {
-        'places': Place.objects.all()
+        'places': Place.objects.all()[:6]
     }
     return render(request, 'travel_app/index.html', context)
 

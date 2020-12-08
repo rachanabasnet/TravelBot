@@ -1,18 +1,18 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "What's up"],
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "What's up", "Hey"],
          "responses": ["Hello!", "Good to see you!", "Hi there, how can I help?", "Hello There!"],
          "context_set": ""
         },
         {"tag": "place",
          "patterns": ["I'd like to go somewhere beautiful", "what do you suggest", "what do you reccommend?", "place to visit", "place"],
-         "responses": ["Nepal is very beautiful", "Why dont you visit Pokhara ", "What about mustang?","What about kathmandu?"],
+         "responses": ["Nepal is very beautiful", "Why dont you visit Kathmandu ", "What about Kathmandu?","What about kathmandu?"],
          "context_set": ""
         },
         {"tag": "temples",
           "patterns": ["I'd like to see some temples", "what do you suggest in temples", "what temples do you reccommend?", "temples to visit", "temples"],
           "responses": ["There are lots of temples such as: Annapurna temple, Seto machhindra nath temple, Akashbhairav temple, Taleju temple, Vajrayogini temple, Jagannath temple, Kalabhairav temple, Dakshinkali, Budanilkantha, Hanumandhoka, Shiva parbati temple",
-            "You can visit Seto machhindra nath temple, Akashbhairav temple, Taleju temple", "Taleju temple, Vajrayogini temple, Jagannath temple","Why don't you visit Dakshinkali, Hanumandhoka, Annapurna temple."],
+            "You can visit Seto machhindra nath temple, Akashbhairav temple, Pashupatinath","Why don't you visit Dakshinkali, Hanumandhoka, Annapurna temple."],
           "context_set": ""
         },
         {"tag": "activities",
@@ -26,7 +26,7 @@
           "context_set": ""
         },
         {"tag": "gifts",
-          "patterns": ["What should I buy in Nepal?", "what do you suggest I buy", "gifts"],
+          "patterns": ["What should I buy in Nepal?", "what do you suggest I buy", "gifts", "what can i buy there"],
           "responses": ["you should buy Thangka Paintings.", "Singing Bowls", "Pashmina, Rice Paper items", "Khukuri, Rice Paper items", "Handicrafts, Statues and masks.", "You can buy Khukuri, Jwellery and Arts.", "Why dont you buy Pashmina. its very warm."],
           "context_set": ""
         },
@@ -46,7 +46,7 @@
          "context_set": ""
         },
         {"tag": "hotel",
-         "patterns": ["which hotel should i stay in?", "are there any good hotels there?", "where can i stay in while i visit kathmandu?"],
+         "patterns": ["which hotel should i stay in?", "are there any good hotels there?", "where can i stay in while i visit kathmandu?", "where can i stay in ktm"],
          "responses": ["I personally prefer yak and yeti", "What kind of hotel do you prefer?"],
          "context_set": ""
         },
@@ -66,7 +66,7 @@
          "context_set": ""
         },
         {"tag": "food",
-         "patterns": ["Famous food in kathmandu", "what kinds of food can i taste in kathmandu", "what food should i try while i visit there?", "good foods"],
+         "patterns": ["Famous food in kathmandu", "what kinds of food can i taste in kathmandu", "what food should i try while i visit there?", "good foods", "what can i eat there?", "foods to eat in kathmandu"],
          "responses": ["Mo:Mo: is a must.", "You can try Mo:Mos, Newari cuisines", "Local foods like panipuri, chatpate, Mo:Mos are the best. You should also try newari foods."],
          "context_set": ""
         },
@@ -165,14 +165,14 @@
          "responses": ["A lot of things, like all the digits other than 0 and 1"],
          "context_set": ""
         },
-        {"tag": "eat",
-         "patterns": ["what can you eat", "what do you eat", "what do you consume"],
-         "responses": ["I consume RAM and other binary digits"],
-         "context_set": ""
-        },
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?", "who are you?", "who?"],
          "responses": ["You can call me TravelBot.", "I'm TravelBot!", "I'm your friend TravelBot", "TravelBot"],
+         "context_set": ""
+        },
+        {"tag": "thamel",
+         "patterns": ["i want to know about thamel", "where is thamel", "thamel", "can you tell me more about thamel", "can you say something about thamel"],
+         "responses": ["A buzzing, visitor-friendly area, Thamel is the city’s main nightlife zone.", "Bars blast out live music by cover bands, and lively eateries serve Nepalese and international dishes in Thamel.", "Thamel is everything you have been looking for in a tourist destination. Its full of life. Different shops, spas, foods, night life, music fills this place. You won't forget it once you visit there."],
          "context_set": ""
         }
    ]

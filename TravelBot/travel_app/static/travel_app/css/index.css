@@ -397,7 +397,7 @@ footer {
     background-color:white;
     height:40px;
     width:auto;
-    display: none;
+    display: block;
 }
 
 #chat-message-input{
